@@ -1,0 +1,12 @@
+services:
+  postgres:
+    image: postgres:latest
+    ports:
+      - 5438:5438
+    labels:
+      - "custom.project=finance-tracking-application"
+      - "custom.service=postgres"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DATABASE: postgres
